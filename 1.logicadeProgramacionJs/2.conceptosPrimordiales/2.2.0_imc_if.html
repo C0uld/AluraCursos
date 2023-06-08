@@ -1,0 +1,43 @@
+<meta charset="UTF-8">
+<h1>PROGRAMA PARA CALCULAR IMC</h1>
+<script>
+
+	function saltarLinea() {
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+	function muestra(frase) {
+		document.write("<big>" + frase + "</big>");
+		saltarLinea();
+	}
+
+	function calculoImc(peso, altura) {
+		return imc = peso / (altura * altura);
+	}
+
+	const INT_NORMAL_MIN = 18.5;
+	const INT_NORMAL_MAX = 24.9;
+	const SOBREPESO = 25.0;
+	const OBESIDAD = 30.0;
+
+	let persona = prompt("Informe su nombre: ");
+	let pesoPersona = parseFloat(prompt(persona + ", informe su peso (en Kilos): "));
+	let alturaPersona = parseFloat(prompt(persona + ", informe su altura (en metros): "));
+	let imcTotal = calculoImc(pesoPersona, alturaPersona);
+
+	muestra(persona + ", su IMC es de: " + imcTotal.toFixed(3) + " kg/m^2.");
+
+	if (imcTotal >= OBESIDAD) {
+		muestra(persona + ", su IMC indica que tiene obesidad.");
+	} else if (imcTotal < OBESIDAD && imcTotal > SOBREPESO) {
+		muestra(persona + ", su IMC indica que tiene preobesidad.");
+	} else if (imcTotal >= INT_NORMAL_MIN && imcTotal <= INT_NORMAL_MAX) {
+		muestra(persona + ", su IMC indica que tiene lo recomendado.");
+	} else {
+		muestra(persona + ", su IMC indica que tiene bajo lo recomendado.");
+	}
+
+
+
+</script>

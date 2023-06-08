@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+<h1>PROGRAMA PARA CALCULAR IMC</h1>
+<script>
+	function saltarLinea() {
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<hr>");
+		document.write("<br>");
+		document.write("<br>");
+	}
+	function muestra(frase) {
+		document.write("<big>" + frase + "</big>");
+		saltarLinea();
+	}
+
+	function calculoImc(peso, altura) {
+
+		//var imc = peso / (altura * altura);
+		return imc = peso / (altura * altura);
+	}
+	var persona = prompt("Informe su nombre: ");
+	var pesoPersona = prompt(persona + ", informe su peso (en Kilos): ");
+	var alturaPersona = prompt(persona + ", informe su altura (en metros): ");
+	var imcTotal = calculoImc(pesoPersona, alturaPersona);
+	muestra(persona + ", su IMC es de: " + imcTotal + "kg/m^2.");
+
+</script>

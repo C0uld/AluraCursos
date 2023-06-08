@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+<h1>JUEGO ADIVINA EL NUMERO</h1>
+<script>
+
+	function saltarLinea() {
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+	function muestra(frase) {
+		document.write("<big>" + frase + "</big>");
+		saltarLinea();
+	}
+	var numeroPc = Math.round(Math.random() * 10);
+	let numeroPersona = parseInt(prompt("Adivine el numero, por favor ingrese del 1 al 10."));
+
+	if (numeroPersona != numeroPersona) {
+		muestra("Usted no adivino el numero, es el:" + numeroPc);
+	} else {
+		muestra("Usted adivino el numero, es el:" + numeroPc);
+	}
+
+</script>

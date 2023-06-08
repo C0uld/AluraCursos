@@ -1,0 +1,39 @@
+<meta charset="UTF-8">
+<h1>JUEGO ADIVINA EL NUMERO MEJORADO</h1>
+<script>
+
+	function saltarLinea() {
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+	function muestra(frase) {
+		document.write("<big>" + frase + "</big>");
+		saltarLinea();
+	}
+
+	let numeroPc = Math.round(Math.random() * 10);
+	//let numeroPersona = parseInt(prompt("Adivine el numero, por favor ingrese del 1 al 10."));
+	const INTENTOS = 3;
+	let contador = 1;
+
+	while (contador <= INTENTOS) {
+		let numeroPersona = parseInt(prompt("Ingrese un numero entre 0-10."));
+		if (numeroPc == numeroPersona) {
+
+			alert("Usted acerto, en el intento " + contador + " adivino el numero, es el: " + numeroPc);
+			break;
+		}
+		else {
+			alert("Usted erró.");
+		}
+		contador++;
+	}
+
+	if (numeroPersona == numeroPc) {
+		muestra("Usted acerto en el intento " + contador + " adivino el numero, es el: " + numeroPc);
+	} else {
+		muestra("Usted no adivino el numero, es el: " + numeroPc);
+	}
+
+</script>

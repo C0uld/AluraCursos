@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+<h1>MUNDIAL DE FIFA</h1>
+<script>
+
+	function saltarLinea() {
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+	function muestra(frase) {
+		document.write("<big>" + frase + "</big>");
+		saltarLinea();
+	}
+	var mundial = 1930;
+	var limite = prompt("Ingrese el año limite para calcular.");
+
+	while (mundial <= limite) {
+		muestra("Hubo mundial de la FIFA en el año" + mundial);
+		mundial = mundial + 4;
+	}
+
+
+</script>
